@@ -1,0 +1,40 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# TypeScript
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Logs
+*.log
+
+# Dependency directories
+jspm_packages/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor specific files
+.vscode/
+.idea/
+
+# NPM package-lock file
+package-lock.json
+
+# Yarn lock file
+yarn.lock
+
+# Next.js or React build folder (if using Next.js or React app with custom build)
+.next/
+out/
