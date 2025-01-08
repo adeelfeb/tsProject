@@ -1,3 +1,9 @@
+# ScreenShot of TodoProject
+
+![Alt text](/todoReactTSX/todo/images/1.png)
+
+
+
 To set up a **Vite project** with **TypeScript** (`TSX`), **Tailwind CSS**, and additional TypeScript definitions (`@types/node`), here's a step-by-step guide:
 
 ### Step 1: Install Dependencies
