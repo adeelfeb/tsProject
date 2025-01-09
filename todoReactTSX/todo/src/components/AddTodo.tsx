@@ -17,12 +17,15 @@ const AddTodo = ({onAddTodo}: AddTodoProp) => {
   const onSubmit = (event: FormEvent)=>{
     event.preventDefault()
     onAddTodo(toText)
+    setToText("")
+    
 
   }
   return (
     <Card className="p-8">
       <form onSubmit={onSubmit} className="flex items-center gap-4">
-        <Input onChange={getTodoText} placeholder="Enter here" type="text" className="flex-grow" />
+        <Input 
+        value={toText} onChange={getTodoText} placeholder="Enter here" type="text" className="flex-grow" />
         <Button type="submit">Add Todo</Button>
       </form>
     </Card>

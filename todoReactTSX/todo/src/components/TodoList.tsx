@@ -5,6 +5,7 @@ import { Delete } from 'lucide-react';
 
 type TodoListProps = {
   items: { id: string; text: string }[];
+  onRemoveTodo: (toDoId: string)=>void
 };
 
 const TodoList: React.FC<TodoListProps> = (props) => {
@@ -20,7 +21,7 @@ const TodoList: React.FC<TodoListProps> = (props) => {
           <Card key={item.id} className="m-2">
           <CardHeader className="flex flex-row justify-between items-center">
             <CardTitle className="text-lg font-medium">{item.text}</CardTitle>
-            <Button variant="destructive" size="icon" className="ml-4">
+            <Button onClick={()=>props.onRemoveTodo(item.id)} variant="destructive" size="icon" className="ml-4">
               <Delete />
             </Button>
           </CardHeader>

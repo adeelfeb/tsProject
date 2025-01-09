@@ -13,12 +13,19 @@ function App() {
     setitems([...items , {id: tempId, text} ])
   }
 
+  const removeTodo = (toDoId: string)=>{
+    const newToDo = items.filter((todoItem: todoType)=>{
+      return todoItem.id !== toDoId
+    })
+    setitems(newToDo)
+  }
+
   return (
     <>
       <main className="max-w-8xl mx-auto">
         {/* Using Button component from ShadCN UI */}
         <AddTodo onAddTodo={addInTodo} />
-        <TodoList items={items} />
+        <TodoList items={items} onRemoveTodo={removeTodo} />
       </main>
     </>
   );
